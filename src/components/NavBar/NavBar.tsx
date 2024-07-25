@@ -27,7 +27,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`bg-black w-9/12 p-4 fixed top-3 left-0 right-0 mx-auto transition-all duration-300 z-50 rounded-xl ${
+			className={`bg-black w-[70vw] p-4 fixed top-3 left-0 right-0 mx-auto transition-all duration-300 z-50 rounded-full ${
 				scrolled ? 'shadow-lg bg-white' : ''
 			}`}>
 			<div className="container mx-auto flex justify-between items-center">

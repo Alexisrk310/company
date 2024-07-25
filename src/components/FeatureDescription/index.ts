@@ -1,0 +1,1 @@
+export { default as FeatureDescription } from './FeatureDescription';
