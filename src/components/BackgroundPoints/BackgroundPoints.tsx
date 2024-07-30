@@ -5,9 +5,7 @@ interface BackgroundPoints {
 	children?: React.ReactNode;
 }
 
-const BackgroundPoints: React.FC<BackgroundPoints> = ({
-	children,
-}) => {
+const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 	const numLines = 7; // Número de líneas en la cuadrícula
 
 	return (
@@ -16,7 +14,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({
 			{Array.from({ length: numLines }).map((_, index) => (
 				<div
 					key={`vertical-${index}`}
-					className="absolute"
+					className={`absolute ${index >= 5 ? 'hidden md:block' : ''}`}
 					style={{
 						width: '1px',
 						height: '100%',
@@ -32,7 +30,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({
 			{Array.from({ length: numLines - 1 }).map((_, index) => (
 				<div
 					key={`horizontal-${index}`}
-					className="absolute"
+					className={`absolute ${index >= 5 ? 'hidden md:block' : ''}`}
 					style={{
 						width: '100%',
 						height: '1px',
@@ -51,7 +49,9 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({
 						return (
 							<motion.div
 								key={`point-${i}-${j}`}
-								className="absolute z-10"
+								className={`absolute ${
+									i >= 5 || j >= 5 ? 'hidden md:block' : ''
+								}`}
 								style={{
 									width: '30px',
 									height: '30px',

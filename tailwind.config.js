@@ -10,6 +10,7 @@ export default {
     "./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     extend: {
+
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",

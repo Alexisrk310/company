@@ -98,3 +98,60 @@ export const featuresNotices: PropsfeaturesNotices[] = [
 		icon: <IconHeart />,
 	},
 ];
+
+export const items = [
+	{
+		quote:
+			"The best investment we've made in years. It's not just a tool; it's a game-changer that has propelled our business forward.",
+		name: 'Nathan Hill',
+		title: 'Investment Analyst',
+	},
+	{
+		quote:
+			"A must-have tool for any professional. It's revolutionized the way we approach problem-solving and decision-making.",
+		name: 'Ivy Wilson',
+		title: 'Business Consultant',
+	},
+	{
+		quote:
+			'Transformative technology with real impact. It has streamlined our operations and brought unprecedented efficiency to our processes.',
+		name: 'Leo Carter',
+		title: 'Technology Strategist',
+	},
+	{
+		quote:
+			'The results are always impressive. This AI has helped us to not only meet but exceed our performance targets.',
+		name: 'Jack Brown',
+		title: 'Performance Manager',
+	},
+	{
+		quote:
+			'A seamless integration into our daily tasks. It has enhanced our productivity and allowed us to focus on more strategic initiatives.',
+		name: 'Peter White',
+		title: 'Strategic Planner',
+	},
+	{
+		quote:
+			"It has completely changed the way we operate. The AI's ability to analyze and optimize our processes is phenomenal.",
+		name: 'Tina Brooks',
+		title: 'Process Analyst',
+	},
+	{
+		quote:
+			"It's a game-changer for our business. The insights it provides are invaluable and have driven substantial growth for us.",
+		name: 'Quinn Taylor',
+		title: 'Growth Manager',
+	},
+	{
+		quote:
+			'It consistently exceeds our expectations. Its adaptability and precision make it indispensable for our daily operations.',
+		name: 'Olivia Scott',
+		title: 'Quality Assurance Manager',
+	},
+	{
+		quote:
+			"This AI has transformed the way I work! It's like having a brilliant assistant who knows exactly what I need before I even ask.",
+		name: 'Alice Johnson',
+		title: 'Senior Software Engineer',
+	},
+];
