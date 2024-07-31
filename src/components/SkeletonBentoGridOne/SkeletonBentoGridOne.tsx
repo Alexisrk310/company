@@ -3,14 +3,13 @@ const SkeletonBentoGridOne = () => {
 		<div className="relative flex py-8 px-2 gap-10 h-full">
 			<div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
 				<div className="flex flex-1 w-full h-full flex-col space-y-2  ">
-					{/* TODO */}
-					{/* <img
-						src="/linear.webp"
-						alt="header"
+					<img
+						src="services/expressShipping.jpeg"
+						alt="Express Shipping"
 						width={800}
 						height={800}
-						className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
-					/> */}
+						className="h-full w-full aspect-square  object-left-top rounded-sm"
+					/>
 				</div>
 			</div>
 

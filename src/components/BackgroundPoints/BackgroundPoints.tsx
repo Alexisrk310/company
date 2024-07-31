@@ -14,7 +14,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 			{Array.from({ length: numLines }).map((_, index) => (
 				<div
 					key={`vertical-${index}`}
-					className={`absolute ${index >= 5 ? 'hidden md:block' : ''}`}
+					className={`absolute `}
 					style={{
 						width: '1px',
 						height: '100%',
@@ -30,7 +30,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 			{Array.from({ length: numLines - 1 }).map((_, index) => (
 				<div
 					key={`horizontal-${index}`}
-					className={`absolute ${index >= 5 ? 'hidden md:block' : ''}`}
+					className={`absolute `}
 					style={{
 						width: '100%',
 						height: '1px',
@@ -49,8 +49,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 						return (
 							<motion.div
 								key={`point-${i}-${j}`}
-								className={`absolute ${
-									i >= 5 || j >= 5 ? 'hidden md:block' : ''
+								className={`absolute  md:block' : ''
 								}`}
 								style={{
 									width: '30px',

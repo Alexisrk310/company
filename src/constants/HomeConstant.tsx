@@ -6,47 +6,49 @@ import {
 } from '@/components';
 
 import {
-	PropsFeatures,
+	PropsServicesCompany,
 	PropsfeaturesNotices,
 } from '@/interfaces/PropsFeatures';
 import {
-	IconAdjustmentsBolt,
-	IconCloud,
-	IconCurrencyDollar,
-	IconEaseInOut,
-	IconHeart,
-	IconHelp,
-	IconRouteAltLeft,
-	IconTerminal2,
-} from '@tabler/icons-react';
+	FaPlane,
+	FaTruck,
+	FaTag,
+	FaShieldAlt,
+	FaBoxOpen,
+} from 'react-icons/fa';
+import {
+	MdAccessTime,
+	MdOutlineLocalShipping,
+	MdOutlinePayment,
+} from 'react-icons/md';
 
-export const features: PropsFeatures[] = [
+export const servicesCompany: PropsServicesCompany[] = [
 	{
-		title: 'Track issues effectively',
+		title: 'Express Shipping',
 		description:
-			'Track and manage your project issues with ease using our intuitive interface.',
+			'Fast delivery services that ensure packages reach their destination in a short time, often within 1-2 business days.',
 		skeleton: <SkeletonBentoGridOne />,
 		className:
 			'col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800',
 	},
 	{
-		title: 'Capture pictures with AI',
+		title: 'Shipment Tracking',
 		description:
-			'Capture stunning photos effortlessly using our advanced AI technology.',
+			'Tools and technologies that enable customers to track the progress of their shipments in real time from pickup to final delivery.',
 		skeleton: <SkeletonBentoGridTwo />,
 		className: 'border-b col-span-1 lg:col-span-2 dark:border-neutral-800',
 	},
 	{
-		title: 'Watch our AI on YouTube',
+		title: 'Customs Management',
 		description:
-			'Whether its you or Tyler Durden, you can get to know about our product on YouTube',
+			'Services that help manage documentation and customs clearance requirements for international shipments, ensuring compliance with local regulations.',
 		skeleton: <SkeletonBentoGridThree />,
 		className: 'col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800',
 	},
 	{
-		title: 'Deploy in seconds',
+		title: 'Shipping Insurance',
 		description:
-			'With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.',
+			'Insurance options to protect shipments against loss, damage or theft during transit.',
 		skeleton: <SkeletonBentoGridFour />,
 		className: 'col-span-1 lg:col-span-3 border-b lg:border-none',
 	},
@@ -54,104 +56,201 @@ export const features: PropsFeatures[] = [
 
 export const featuresNotices: PropsfeaturesNotices[] = [
 	{
-		title: 'Built for developers',
+		title: 'Express Shipping',
 		description:
-			'Built for engineers, developers, dreamers, thinkers and doers.',
-		icon: <IconTerminal2 />,
+			'Fast and secure delivery within 1-2 days for urgent shipments.',
+		icon: <FaPlane />,
 	},
 	{
-		title: 'Ease of use',
+		title: 'Real-Time Tracking',
+		description: 'Track your shipments in real-time from pick-up to delivery.',
+		icon: <MdOutlineLocalShipping />,
+	},
+	{
+		title: 'Customs Management',
 		description:
-			"It's as easy as using an Apple, and as expensive as buying one.",
-		icon: <IconEaseInOut />,
+			'Simplified customs processes for hassle-free international shipping.',
+		icon: <MdOutlinePayment />,
 	},
 	{
-		title: 'Pricing like no other',
+		title: 'Shipping Insurance',
 		description:
-			'Our prices are best in the market. No cap, no lock, no credit card required.',
-		icon: <IconCurrencyDollar />,
+			'Protect your packages with coverage against loss, damage, or theft.',
+		icon: <FaShieldAlt />,
 	},
 	{
-		title: '100% Uptime guarantee',
-		description: 'We just cannot be taken down by anyone.',
-		icon: <IconCloud />,
-	},
-	{
-		title: 'Multi-tenant Architecture',
-		description: 'You can simply share passwords instead of buying new seats',
-		icon: <IconRouteAltLeft />,
+		title: 'Competitive Pricing',
+		description: 'Affordable rates with no hidden fees or extra charges.',
+		icon: <FaTag />,
 	},
 	{
 		title: '24/7 Customer Support',
 		description:
-			'We are available a 100% of the time. Atleast our AI Agents are.',
-		icon: <IconHelp />,
+			'Our support team is available around the clock to assist you.',
+		icon: <MdAccessTime />,
 	},
 	{
-		title: 'Money back guarantee',
-		description: 'If you donot like EveryAI, we will convince you to like us.',
-		icon: <IconAdjustmentsBolt />,
+		title: 'Package Pickup',
+		description: 'Convenient pickup services from your location.',
+		icon: <FaBoxOpen />,
 	},
 	{
-		title: 'And everything else',
-		description: 'I just ran out of copy ideas. Accept my sincere apologies',
-		icon: <IconHeart />,
+		title: 'Flexible Delivery Options',
+		description:
+			'Choose from a variety of delivery options to suit your needs.',
+		icon: <FaTruck />,
 	},
 ];
 
-export const items = [
+export const MovingCardsOne = [
 	{
 		quote:
-			"The best investment we've made in years. It's not just a tool; it's a game-changer that has propelled our business forward.",
-		name: 'Nathan Hill',
-		title: 'Investment Analyst',
+			'Our package arrived ahead of schedule and in perfect condition. The service was top-notch and exceeded our expectations.',
+		name: 'Emily Roberts',
+		title: 'Marketing Manager',
 	},
 	{
 		quote:
-			"A must-have tool for any professional. It's revolutionized the way we approach problem-solving and decision-making.",
-		name: 'Ivy Wilson',
-		title: 'Business Consultant',
+			"I've used many shipping companies, but this one stands out for its reliability and speed. Highly recommended!",
+		name: 'James Anderson',
+		title: 'E-commerce Entrepreneur',
 	},
 	{
 		quote:
-			'Transformative technology with real impact. It has streamlined our operations and brought unprecedented efficiency to our processes.',
-		name: 'Leo Carter',
-		title: 'Technology Strategist',
+			'The real-time tracking feature was incredibly helpful. I was able to see exactly where my shipment was at all times.',
+		name: 'Sophia Martinez',
+		title: 'Graphic Designer',
 	},
 	{
 		quote:
-			'The results are always impressive. This AI has helped us to not only meet but exceed our performance targets.',
-		name: 'Jack Brown',
-		title: 'Performance Manager',
+			'Excellent customer service and hassle-free delivery. My international package arrived without any issues.',
+		name: 'Michael Lee',
+		title: 'Business Owner',
 	},
 	{
 		quote:
-			'A seamless integration into our daily tasks. It has enhanced our productivity and allowed us to focus on more strategic initiatives.',
-		name: 'Peter White',
-		title: 'Strategic Planner',
+			'Affordable rates and fast delivery! I am very impressed with how smoothly everything went.',
+		name: 'Olivia Brown',
+		title: 'Freelancer',
 	},
 	{
 		quote:
-			"It has completely changed the way we operate. The AI's ability to analyze and optimize our processes is phenomenal.",
-		name: 'Tina Brooks',
-		title: 'Process Analyst',
+			'The entire process from pickup to delivery was seamless. I will definitely use this service again for future shipments.',
+		name: 'Daniel Harris',
+		title: 'Consultant',
 	},
 	{
 		quote:
-			"It's a game-changer for our business. The insights it provides are invaluable and have driven substantial growth for us.",
-		name: 'Quinn Taylor',
-		title: 'Growth Manager',
+			'Great service overall. My package arrived in perfect condition and much quicker than expected.',
+		name: 'Ava Wilson',
+		title: 'Retail Manager',
 	},
 	{
 		quote:
-			'It consistently exceeds our expectations. Its adaptability and precision make it indispensable for our daily operations.',
-		name: 'Olivia Scott',
-		title: 'Quality Assurance Manager',
+			'I’m really impressed with the attention to detail and care taken in handling my package. Highly satisfied!',
+		name: 'Liam Thompson',
+		title: 'IT Specialist',
+	},
+];
+
+export const MovingCardsTwo = [
+	{
+		quote:
+			'Our package arrived ahead of schedule and in perfect condition. The service was top-notch and exceeded our expectations.',
+		name: 'Emily Roberts',
+		title: 'Marketing Manager',
 	},
 	{
 		quote:
-			"This AI has transformed the way I work! It's like having a brilliant assistant who knows exactly what I need before I even ask.",
-		name: 'Alice Johnson',
-		title: 'Senior Software Engineer',
+			"I've used many shipping companies, but this one stands out for its reliability and speed. Highly recommended!",
+		name: 'James Anderson',
+		title: 'E-commerce Entrepreneur',
+	},
+	{
+		quote:
+			'The real-time tracking feature was incredibly helpful. I was able to see exactly where my shipment was at all times.',
+		name: 'Sophia Martinez',
+		title: 'Graphic Designer',
+	},
+	{
+		quote:
+			'Excellent customer service and hassle-free delivery. My international package arrived without any issues.',
+		name: 'Michael Lee',
+		title: 'Business Owner',
+	},
+	{
+		quote:
+			'Affordable rates and fast delivery! I am very impressed with how smoothly everything went.',
+		name: 'Olivia Brown',
+		title: 'Freelancer',
+	},
+	{
+		quote:
+			'The entire process from pickup to delivery was seamless. I will definitely use this service again for future shipments.',
+		name: 'Daniel Harris',
+		title: 'Consultant',
+	},
+	{
+		quote:
+			'Great service overall. My package arrived in perfect condition and much quicker than expected.',
+		name: 'Ava Wilson',
+		title: 'Retail Manager',
+	},
+	{
+		quote:
+			'I’m really impressed with the attention to detail and care taken in handling my package. Highly satisfied!',
+		name: 'Liam Thompson',
+		title: 'IT Specialist',
+	},
+];
+
+export const MovingCardsThree = [
+	{
+		quote:
+			'Our package arrived ahead of schedule and in perfect condition. The service was top-notch and exceeded our expectations.',
+		name: 'Emily Roberts',
+		title: 'Marketing Manager',
+	},
+	{
+		quote:
+			"I've used many shipping companies, but this one stands out for its reliability and speed. Highly recommended!",
+		name: 'James Anderson',
+		title: 'E-commerce Entrepreneur',
+	},
+	{
+		quote:
+			'The real-time tracking feature was incredibly helpful. I was able to see exactly where my shipment was at all times.',
+		name: 'Sophia Martinez',
+		title: 'Graphic Designer',
+	},
+	{
+		quote:
+			'Excellent customer service and hassle-free delivery. My international package arrived without any issues.',
+		name: 'Michael Lee',
+		title: 'Business Owner',
+	},
+	{
+		quote:
+			'Affordable rates and fast delivery! I am very impressed with how smoothly everything went.',
+		name: 'Olivia Brown',
+		title: 'Freelancer',
+	},
+	{
+		quote:
+			'The entire process from pickup to delivery was seamless. I will definitely use this service again for future shipments.',
+		name: 'Daniel Harris',
+		title: 'Consultant',
+	},
+	{
+		quote:
+			'Great service overall. My package arrived in perfect condition and much quicker than expected.',
+		name: 'Ava Wilson',
+		title: 'Retail Manager',
+	},
+	{
+		quote:
+			'I’m really impressed with the attention to detail and care taken in handling my package. Highly satisfied!',
+		name: 'Liam Thompson',
+		title: 'IT Specialist',
 	},
 ];

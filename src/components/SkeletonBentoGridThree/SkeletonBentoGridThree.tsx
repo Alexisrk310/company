@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SkeletonBentoGridThree = () => {
 	return (
 		<Link
-			to="https://www.youtube.com/watch?v=RPa3_AD1_Vs"
+			to="https://www.youtube.com/watch?v=WqddGUuSkcA&t=33s&ab_channel=ProActiveChain"
 			target="__blank"
 			className="relative flex gap-10  h-full group/image">
 			<div className="w-full  mx-auto bg-transparent dark:bg-transparent group h-full">
@@ -12,7 +12,7 @@ const SkeletonBentoGridThree = () => {
 					{/* TODO */}
 					<IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
 					<img
-						src="https://assets.aceternity.com/fireship.jpg"
+						src="services/customsManagement.jpeg"
 						alt="header"
 						width={800}
 						height={800}
