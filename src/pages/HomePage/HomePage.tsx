@@ -6,12 +6,13 @@ import {
 	InfiniteMovingCards,
 	BackgroundPoints,
 } from '@/components';
+
 import {
 	servicesCompany,
 	featuresNotices,
-	MovingCardsOne,
-	MovingCardsTwo,
-	MovingCardsThree,
+	movingCardsOne,
+	movingCardsTwo,
+	movingCardsThree,
 } from '@/constants/HomeConstant';
 
 import { motion } from 'framer-motion';
@@ -73,19 +74,19 @@ const HomePage = () => {
 			</div>
 			<div className="flex flex-col items-center mb-32">
 				<InfiniteMovingCards
-					items={MovingCardsOne}
+					items={movingCardsOne}
 					direction="right"
 					pauseOnHover={true}
 					speed="normal"
 				/>
 				<InfiniteMovingCards
-					items={MovingCardsTwo}
+					items={movingCardsTwo}
 					direction="left"
 					pauseOnHover={true}
 					speed="normal"
 				/>
 				<InfiniteMovingCards
-					items={MovingCardsThree}
+					items={movingCardsThree}
 					direction="right"
 					pauseOnHover={true}
 					speed="normal"
@@ -108,7 +109,7 @@ const HomePage = () => {
 						<div className="font-extralight text-sm sm:text-base md:text-2xl lg:text-4xl text-white py-4 text-center">
 							or track it
 						</div>
-						<button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-6 py-2">
+						<button className="bg-black hover:bg-slate-950  dark:bg-white rounded-full w-fit text-white dark:text-black px-6 py-2">
 							Right now
 						</button>
 					</motion.div>

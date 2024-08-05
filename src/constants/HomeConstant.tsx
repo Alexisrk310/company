@@ -102,7 +102,7 @@ export const featuresNotices: PropsfeaturesNotices[] = [
 	},
 ];
 
-export const MovingCardsOne = [
+export const movingCardsOne = [
 	{
 		quote:
 			'Our package arrived ahead of schedule and in perfect condition. The service was top-notch and exceeded our expectations.',
@@ -153,7 +153,7 @@ export const MovingCardsOne = [
 	},
 ];
 
-export const MovingCardsTwo = [
+export const movingCardsTwo = [
 	{
 		quote:
 			'Our package arrived ahead of schedule and in perfect condition. The service was top-notch and exceeded our expectations.',
@@ -204,7 +204,7 @@ export const MovingCardsTwo = [
 	},
 ];
 
-export const MovingCardsThree = [
+export const movingCardsThree = [
 	{
 		quote:
 			'Our package arrived ahead of schedule and in perfect condition. The service was top-notch and exceeded our expectations.',

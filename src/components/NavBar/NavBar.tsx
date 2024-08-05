@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaRegMoon } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -33,38 +34,66 @@ const Navbar = () => {
 			<div className="container mx-auto flex justify-between items-center">
 				{/* Left section: Logo and Navigation */}
 				<div className="flex items-center space-x-4">
-					<a
-						href="#"
-						className={`text-lg font-bold ${
-							scrolled ? 'text-black' : 'text-white'
-						}`}>
+					<NavLink
+						to="/"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} text-lg font-bold ${
+								scrolled ? 'text-black' : 'text-white'
+							}`
+						}>
 						TransQ
-					</a>
+					</NavLink>
 					<div className="hidden md:flex items-center space-x-4 ml-6">
-						<a href="#" className={`${scrolled ? 'text-black' : 'text-white'}`}>
+						<NavLink
+							to="/order-tracking"
+							className={({ isActive }) =>
+								`${isActive ? '' : 'pointer '} ${
+									scrolled ? 'text-black' : 'text-white'
+								}`
+							}>
 							Shipments
-						</a>
-						<a href="#" className={`${scrolled ? 'text-black' : 'text-white'}`}>
+						</NavLink>
+						<NavLink
+							to="/"
+							className={({ isActive }) =>
+								`${isActive ? '' : 'pointer '} ${
+									scrolled ? 'text-black' : 'text-white'
+								}`
+							}>
 							Services
-						</a>
-						<a href="#" className={`${scrolled ? 'text-black' : 'text-white'}`}>
+						</NavLink>
+						<NavLink
+							to="/"
+							className={({ isActive }) =>
+								`${isActive ? '' : 'pointer '} ${
+									scrolled ? 'text-black' : 'text-white'
+								}`
+							}>
 							Contact
-						</a>
+						</NavLink>
 					</div>
 				</div>
 				{/* Right section: Icons */}
 				<div className="hidden md:flex items-center space-x-4">
 					<FaRegMoon className={`${scrolled ? 'text-black' : 'text-white'}`} />
-					<a href="#" className={`${scrolled ? 'text-black' : 'text-white'}`}>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled ? 'text-black' : 'text-white'
+							}`
+						}>
 						Login
-					</a>
-					<a
-						href="#"
-						className={`${
-							scrolled ? 'text-black' : 'text-white'
-						} bg-gray-700 px-3 py-1 rounded`}>
+					</NavLink>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled ? 'text-black' : 'text-white'
+							} bg-gray-700 px-3 py-1 rounded`
+						}>
 						Sign Up
-					</a>
+					</NavLink>
 				</div>
 				{/* Mobile menu button */}
 				<div className="md:hidden">
@@ -91,56 +120,66 @@ const Navbar = () => {
 			{/* Mobile menu */}
 			{isOpen && (
 				<div className="md:hidden mt-2">
-					<a
-						href="#"
-						className={`${
-							scrolled
-								? 'text-black block  py-2 px-4'
-								: ' block text-white py-2 px-4'
-						}`}>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled
+									? 'text-black block py-2 px-4'
+									: 'block text-white py-2 px-4'
+							}`
+						}>
 						Pricing
-					</a>
-					<a
-						href="#"
-						className={`${
-							scrolled
-								? 'text-black block  py-2 px-4'
-								: ' block text-white py-2 px-4'
-						}`}>
+					</NavLink>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled
+									? 'text-black block py-2 px-4'
+									: 'block text-white py-2 px-4'
+							}`
+						}>
 						Blog
-					</a>
-					<a
-						href="#"
-						className={`${
-							scrolled
-								? 'text-black block  py-2 px-4'
-								: ' block text-white py-2 px-4'
-						}`}>
+					</NavLink>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled
+									? 'text-black block py-2 px-4'
+									: 'block text-white py-2 px-4'
+							}`
+						}>
 						Contact
-					</a>
+					</NavLink>
 					<FaRegMoon
 						className={`${
 							scrolled ? 'my-2 mx-4 text-black ' : 'my-2 mx-4 text-white'
 						}`}
 					/>
-					<a
-						href="#"
-						className={`${
-							scrolled
-								? 'text-black block  py-2 px-4'
-								: ' block text-white py-2 px-4'
-						}`}>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled
+									? 'text-black block py-2 px-4'
+									: 'block text-white py-2 px-4'
+							}`
+						}>
 						Login
-					</a>
-					<a
-						href="#"
-						className={`${
-							scrolled
-								? 'text-black block  py-2 px-4 bg-gray-700 rounded'
-								: ' block text-white py-2 px-4 bg-gray-700 rounded'
-						}`}>
+					</NavLink>
+					<NavLink
+						to="#"
+						className={({ isActive }) =>
+							`${isActive ? '' : 'pointer '} ${
+								scrolled
+									? 'text-black block py-2 px-4 bg-gray-700 rounded'
+									: 'block text-white py-2 px-4 bg-gray-700 rounded'
+							}`
+						}>
 						Sign Up
-					</a>
+					</NavLink>
 				</div>
 			)}
 		</nav>
