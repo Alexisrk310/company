@@ -11,3 +11,7 @@ export * from './SkeletonBentoGridFour';
 export * from './Globe';
 export * from './Feature';
 export * from './InfiniteMovingCards';
+export * from './ServiceCard';
+export * from './CardHorizontal';
+export * from './Footer';
+export * from './ContentTextCardHorizontal';

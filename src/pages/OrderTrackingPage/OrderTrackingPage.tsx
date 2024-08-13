@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Component: React.FC = () => {
+const OrderTrackingPage: React.FC = () => {
 	const [shippingInformation, setShippingInformation] = useState({
 		orderNumber: '',
 		stateOrder: false,
@@ -24,7 +24,7 @@ const Component: React.FC = () => {
 				<div className="w-full max-w-3xl mx-auto p-9 sm:px-6 lg:px-8 bg-white text-black rounded-2xl">
 					<div className="space-y-6">
 						<div className="text-center">
-							<h1 className="text-3xl font-bold">Track Your DHL Shipment</h1>
+							<h1 className="text-3xl font-bold">Track Your Shipment</h1>
 							<p className="text-gray-600">
 								Enter your tracking number to see the status of your delivery.
 							</p>
@@ -145,4 +145,4 @@ const Component: React.FC = () => {
 	);
 };
 
-export default Component;
+export default OrderTrackingPage;

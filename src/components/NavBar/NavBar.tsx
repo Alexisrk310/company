@@ -11,7 +11,7 @@ const Navbar = () => {
 	};
 
 	const handleScroll = () => {
-		const offset = window.scrollY;
+		const offset = globalThis.scrollY;
 		if (offset > 50) {
 			setScrolled(true);
 		} else {
@@ -20,9 +20,9 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
-		window.addEventListener('scroll', handleScroll);
+		globalThis.addEventListener('scroll', handleScroll);
 		return () => {
-			window.removeEventListener('scroll', handleScroll);
+			globalThis.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
@@ -51,10 +51,10 @@ const Navbar = () => {
 									scrolled ? 'text-black' : 'text-white'
 								}`
 							}>
-							Shipments
+							Track the order
 						</NavLink>
 						<NavLink
-							to="/"
+							to="/services"
 							className={({ isActive }) =>
 								`${isActive ? '' : 'pointer '} ${
 									scrolled ? 'text-black' : 'text-white'
@@ -63,7 +63,7 @@ const Navbar = () => {
 							Services
 						</NavLink>
 						<NavLink
-							to="/"
+							to="/contact"
 							className={({ isActive }) =>
 								`${isActive ? '' : 'pointer '} ${
 									scrolled ? 'text-black' : 'text-white'
@@ -121,47 +121,53 @@ const Navbar = () => {
 			{isOpen && (
 				<div className="md:hidden mt-2">
 					<NavLink
-						to="#"
+						to="/order-tracking"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${
+								isActive ? 'hover:bg-slate-700' : 'pointer hover:bg-slate-700'
+							} ${
 								scrolled
 									? 'text-black block py-2 px-4'
 									: 'block text-white py-2 px-4'
 							}`
 						}>
-						Pricing
+						Track the order
 					</NavLink>
 					<NavLink
-						to="#"
+						to="/services"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${
+								isActive ? 'hover:bg-slate-700' : 'pointer hover:bg-slate-700'
+							} ${
 								scrolled
 									? 'text-black block py-2 px-4'
 									: 'block text-white py-2 px-4'
 							}`
 						}>
-						Blog
+						Services
 					</NavLink>
 					<NavLink
-						to="#"
+						to="/contact"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${
+								isActive ? 'hover:bg-slate-700' : 'pointer hover:bg-slate-700'
+							} ${
 								scrolled
-									? 'text-black block py-2 px-4'
+									? 'text-black block py-2 px-4 '
 									: 'block text-white py-2 px-4'
 							}`
 						}>
 						Contact
 					</NavLink>
 					<FaRegMoon
-						className={`${
+						className={`hover:text-slate-700 ${
 							scrolled ? 'my-2 mx-4 text-black ' : 'my-2 mx-4 text-white'
 						}`}
 					/>
 					<NavLink
 						to="#"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${isActive ? 'hover:bg-slate-700' : 'pointer '} ${
 								scrolled
 									? 'text-black block py-2 px-4'
 									: 'block text-white py-2 px-4'
@@ -172,7 +178,7 @@ const Navbar = () => {
 					<NavLink
 						to="#"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${isActive ? 'hover:bg-slate-600' : 'pointer'} ${
 								scrolled
 									? 'text-black block py-2 px-4 bg-gray-700 rounded'
 									: 'block text-white py-2 px-4 bg-gray-700 rounded'
