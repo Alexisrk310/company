@@ -16,3 +16,6 @@ export * from './CardHorizontal';
 export * from './Footer';
 export * from './ContentTextCardHorizontal';
 export * from './Input';
+export * from './BottomGradient';
+export * from './ScrollToTop';
+export * from './ScrollUpButton';

@@ -45,9 +45,18 @@ const Navbar = () => {
 					</NavLink>
 					<div className="hidden md:flex items-center space-x-4 ml-6">
 						<NavLink
+							to="/"
+							className={({ isActive }) =>
+								`${isActive ? 'text-slate-500' : 'pointer '} ${
+									scrolled ? 'text-black' : 'text-white'
+								}`
+							}>
+							Home
+						</NavLink>
+						<NavLink
 							to="/order-tracking"
 							className={({ isActive }) =>
-								`${isActive ? '' : 'pointer '} ${
+								`${isActive ? 'text-slate-500' : 'pointer '} ${
 									scrolled ? 'text-black' : 'text-white'
 								}`
 							}>
@@ -56,7 +65,7 @@ const Navbar = () => {
 						<NavLink
 							to="/services"
 							className={({ isActive }) =>
-								`${isActive ? '' : 'pointer '} ${
+								`${isActive ? 'text-slate-500' : 'pointer '} ${
 									scrolled ? 'text-black' : 'text-white'
 								}`
 							}>
@@ -65,7 +74,7 @@ const Navbar = () => {
 						<NavLink
 							to="/contact"
 							className={({ isActive }) =>
-								`${isActive ? '' : 'pointer '} ${
+								`${isActive ? 'text-slate-500' : 'pointer '} ${
 									scrolled ? 'text-black' : 'text-white'
 								}`
 							}>
@@ -77,18 +86,18 @@ const Navbar = () => {
 				<div className="hidden md:flex items-center space-x-4">
 					<FaRegMoon className={`${scrolled ? 'text-black' : 'text-white'}`} />
 					<NavLink
-						to="#"
+						to="/login"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${isActive ? 'text-slate-500' : 'pointer '} ${
 								scrolled ? 'text-black' : 'text-white'
 							}`
 						}>
 						Login
 					</NavLink>
 					<NavLink
-						to="#"
+						to="/register"
 						className={({ isActive }) =>
-							`${isActive ? '' : 'pointer '} ${
+							`${isActive ? 'text-slate-500' : 'pointer '} ${
 								scrolled ? 'text-black' : 'text-white'
 							} bg-gray-700 px-3 py-1 rounded`
 						}>
@@ -165,7 +174,7 @@ const Navbar = () => {
 						}`}
 					/>
 					<NavLink
-						to="#"
+						to="/login"
 						className={({ isActive }) =>
 							`${isActive ? 'hover:bg-slate-700' : 'pointer '} ${
 								scrolled

@@ -11,7 +11,7 @@ import { BottomGradient, Input } from '@/components';
 import { TbBrandApple } from 'react-icons/tb';
 import { motion } from 'framer-motion';
 
-function SignUpPage() {
+function LoginPage() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		console.log('Form submitted');
@@ -68,28 +68,6 @@ function SignUpPage() {
 					</p>
 
 					<form className="my-8" onSubmit={handleSubmit}>
-						<div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-							<div className={cn('flex flex-col space-y-2 w-full')}>
-								<label
-									className={cn(
-										'text-sm font-medium text-black dark:text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-									)}
-									htmlFor="firstname">
-									First name
-								</label>
-								<Input id="firstname" placeholder="Alex" type="text" />
-							</div>
-							<div className={cn('flex flex-col space-y-2 w-full')}>
-								<label
-									className={cn(
-										'text-sm font-medium text-black dark:text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-									)}
-									htmlFor="lastname">
-									Last name
-								</label>
-								<Input id="lastname" placeholder="Smith" type="text" />
-							</div>
-						</div>
 						<div className={cn('flex flex-col space-y-2 w-full mb-4')}>
 							<label
 								className={cn(
@@ -110,22 +88,11 @@ function SignUpPage() {
 							</label>
 							<Input id="password" placeholder="••••••••" type="password" />
 						</div>
-						<div className={cn('flex flex-col space-y-2 w-full mb-8')}>
-							<label htmlFor="againpassword">Enter your password again</label>
-							<Input
-								className={cn(
-									'text-sm font-medium text-black dark:text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-								)}
-								id="againpassword"
-								placeholder="••••••••"
-								type="password"
-							/>
-						</div>
 
 						<button
 							className="bg-gradient-to-br relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600 block dark:bg-zinc-800 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
 							type="submit">
-							Sign up &rarr;
+							Login &rarr;
 							<BottomGradient />
 						</button>
 
@@ -177,4 +144,4 @@ function SignUpPage() {
 	);
 }
 
-export default SignUpPage;
+export default LoginPage;
