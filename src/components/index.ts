@@ -15,3 +15,4 @@ export * from './ServiceCard';
 export * from './CardHorizontal';
 export * from './Footer';
 export * from './ContentTextCardHorizontal';
+export * from './Input';

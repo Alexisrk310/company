@@ -176,7 +176,7 @@ const Navbar = () => {
 						Login
 					</NavLink>
 					<NavLink
-						to="#"
+						to="/register"
 						className={({ isActive }) =>
 							`${isActive ? 'hover:bg-slate-600' : 'pointer'} ${
 								scrolled

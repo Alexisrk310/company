@@ -42,7 +42,15 @@ const HomePage = () => {
 				</motion.div>
 			</BackgroundPoints>
 			<div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
-				<div className="px-8">
+				<motion.div
+					initial={{ opacity: 0.0, y: 40 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{
+						delay: 0.3,
+						duration: 0.8,
+						ease: 'easeInOut',
+					}}
+					className="px-8">
 					<h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-bold text-white dark:text-dark">
 						Our Services
 					</h4>
@@ -53,10 +61,18 @@ const HomePage = () => {
 						and Shipping Insurance to protect your packages. Rely on us for
 						efficient and secure deliveries.
 					</p>
-				</div>
+				</motion.div>
 
 				<div className="relative ">
-					<div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
+					<motion.div
+						initial={{ opacity: 0.0, y: 40 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{
+							delay: 0.3,
+							duration: 0.8,
+							ease: 'easeInOut',
+						}}
+						className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
 						{servicesCompany.map((feature) => (
 							<FeatureCard key={feature.title} className={feature.className}>
 								<FeatureTitle>{feature.title}</FeatureTitle>
@@ -64,15 +80,31 @@ const HomePage = () => {
 								<div className=" h-full w-full">{feature.skeleton}</div>
 							</FeatureCard>
 						))}
-					</div>
+					</motion.div>
 				</div>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto mb-32	">
+			<motion.div
+				initial={{ opacity: 0.0, y: 40 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{
+					delay: 0.3,
+					duration: 0.8,
+					ease: 'easeInOut',
+				}}
+				className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto mb-32	">
 				{featuresNotices.map((feature, index) => (
 					<Feature key={feature.title} {...feature} index={index} />
 				))}
-			</div>
-			<div className="flex flex-col items-center mb-32">
+			</motion.div>
+			<motion.div
+				initial={{ opacity: 0.0, y: 40 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{
+					delay: 0.3,
+					duration: 0.8,
+					ease: 'easeInOut',
+				}}
+				className="flex flex-col items-center mb-32">
 				<InfiniteMovingCards
 					items={movingCardsOne}
 					direction="right"
@@ -91,7 +123,7 @@ const HomePage = () => {
 					pauseOnHover={true}
 					speed="normal"
 				/>
-			</div>
+			</motion.div>
 			<BackgroundPoints>
 				<div className="flex justify-center items-center h-full">
 					<motion.div

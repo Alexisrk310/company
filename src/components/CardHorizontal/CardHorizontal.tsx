@@ -39,7 +39,7 @@ const CardHorizontal = ({
 
 	return (
 		<motion.div
-			className={`flex flex-col lg:flex-row bg-white ${shadow} ${borderRadius} overflow-hidden`}
+			className={`flex flex-col lg:flex-row bg-gradient-to-r from-white to-gray-400 ${shadow} ${borderRadius} overflow-hidden`}
 			initial="hidden"
 			whileInView="visible"
 			whileHover="hover"

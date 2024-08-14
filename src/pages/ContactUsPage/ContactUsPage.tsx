@@ -1,9 +1,28 @@
+import { motion } from 'framer-motion';
 const ContactUsPage = () => {
 	return (
 		<div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
-			<div className="max-w-lg w-full">
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+				className="absolute w-60 h-60 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  top-40 -left-16 z-0 transform rotate-45 hidden md:block animate-fall"></motion.div>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+				className="absolute w-60 h-60 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  bottom-8 right-12 transform rotate-12 hidden md:block animate-fall"></motion.div>
+			<motion.div
+				initial={{ opacity: 0.0, y: -40 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{
+					delay: 0.3,
+					duration: 0.8,
+					ease: 'easeInOut',
+				}}
+				className="max-w-lg w-full">
 				<h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
-				<form className="bg-gray-300 p-6 rounded-lg shadow-lg">
+				<form className="bg-gradient-to-r from-white to-gray-400 p-6 rounded-lg shadow-lg relative z-20">
 					<div className="mb-4">
 						<label
 							className="block text-black text-md font-medium mb-2"
@@ -44,11 +63,21 @@ const ContactUsPage = () => {
 					</div>
 					<button
 						type="submit"
-						className="w-full bg-white text-black font-bold py-3 rounded-lg hover:bg-gray-300 transition duration-200">
+						className="w-full bg-white text-black font-bold py-3 rounded-lg hover:bg-black hover:text-white transition duration-200">
 						Send Message
 					</button>
 				</form>
-			</div>
+			</motion.div>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+				className="w-32 h-32 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse rounded-full top-40 right-4 hidden sm:block"></motion.div>
+			<motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{ duration: 1 }}
+				className="w-32 h-32 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse  rounded-full bottom-8 left-4 transform rotate-45 hidden sm:block"></motion.div>
 		</div>
 	);
 };
