@@ -20,7 +20,7 @@ function SignUpPage() {
 	return (
 		<div className="relative bg-black overflow-hidden">
 			{/* Elementos geométricos en el fondo */}
-			<motion.div
+			{/* <motion.div
 				className="absolute w-72 h-72 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full opacity-20 top-16 left-16"
 				initial={{ scale: 0 }}
 				animate={{ scale: 1.1 }}
@@ -55,7 +55,7 @@ function SignUpPage() {
 					duration: 6,
 					repeat: Infinity,
 					repeatType: 'reverse',
-				}}></motion.div>
+				}}></motion.div> */}
 
 			{/* Fondo del contenido principal */}
 			<div className="relative pt-24 pb-11 sm:mx-3 md:mx-0">

@@ -6,12 +6,12 @@ const ContactUsPage = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="absolute w-60 h-60 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  top-40 -left-16 z-0 transform rotate-45 hidden md:block animate-fall"></motion.div>
+				className="absolute w-96 h-96 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  top-40 left-20 z-0 transform rotate-45 hidden md:hidden lg:block animate-fall"></motion.div>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="absolute w-60 h-60 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  bottom-8 right-12 transform rotate-12 hidden md:block animate-fall"></motion.div>
+				className="absolute w-96 h-96 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  bottom-8 right-20 transform rotate-12 hidden md:hidden lg:block animate-fall"></motion.div>
 			<motion.div
 				initial={{ opacity: 0.0, y: -40 }}
 				whileInView={{ opacity: 1, y: 0 }}
@@ -72,12 +72,12 @@ const ContactUsPage = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="w-32 h-32 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse rounded-full top-40 right-4 hidden sm:block"></motion.div>
+				className="w-60 h-60 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse rounded-full top-40 right-60 hidden md:hidden lg:block"></motion.div>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="w-32 h-32 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse  rounded-full bottom-8 left-4 transform rotate-45 hidden sm:block"></motion.div>
+				className="w-60 h-60 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse  rounded-full bottom-8 left-60 transform rotate-45 hidden md:hidden lg:block"></motion.div>
 		</div>
 	);
 };

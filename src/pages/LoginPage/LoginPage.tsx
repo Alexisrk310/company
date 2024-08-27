@@ -19,44 +19,6 @@ function LoginPage() {
 
 	return (
 		<div className="relative bg-black overflow-hidden">
-			{/* Elementos geométricos en el fondo */}
-			<motion.div
-				className="absolute w-72 h-72 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full opacity-20 top-16 left-16"
-				initial={{ scale: 0 }}
-				animate={{ scale: 1.1 }}
-				transition={{
-					duration: 6,
-					repeat: Infinity,
-					repeatType: 'reverse',
-				}}></motion.div>
-			<motion.div
-				className="absolute w-72 h-72 bg-gradient-to-r from-gray-300 to-gray-500 rounded-full opacity-20 top-16 right-16"
-				initial={{ scale: 0 }}
-				animate={{ scale: 1.1 }}
-				transition={{
-					duration: 6,
-					repeat: Infinity,
-					repeatType: 'reverse',
-				}}></motion.div>
-			<motion.div
-				className="absolute w-96 h-96 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full opacity-30 bottom-16 left-16"
-				initial={{ scale: 0 }}
-				animate={{ scale: 1.2 }}
-				transition={{
-					duration: 6,
-					repeat: Infinity,
-					repeatType: 'reverse',
-				}}></motion.div>
-			<motion.div
-				className="absolute w-96 h-96 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full opacity-30 bottom-16 right-16"
-				initial={{ scale: 0 }}
-				animate={{ scale: 1.2 }}
-				transition={{
-					duration: 6,
-					repeat: Infinity,
-					repeatType: 'reverse',
-				}}></motion.div>
-
 			{/* Fondo del contenido principal */}
 			<div className="relative pt-24 pb-11 sm:mx-3 md:mx-0">
 				<div className="relative max-w-md w-full mx-auto rounded-2xl px-4 py-8 md:p-8 shadow-input bg-gradient-to-r from-white to-gray-400 dark:bg-black">
