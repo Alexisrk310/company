@@ -41,8 +41,8 @@ const OrderTrackingPage: React.FC = () => {
 	};
 
 	return (
-		<div className="bg-black min-h-screen">
-			<div className="pt-24 pb-11">
+		<div className="bg-white dark:bg-black min-h-screen text-white">
+			<div className="pt-28 pb-11">
 				<motion.div
 					initial={{ opacity: 0.0, y: -40 }}
 					whileInView={{ opacity: 1, y: 0 }}

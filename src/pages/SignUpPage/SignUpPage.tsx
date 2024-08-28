@@ -9,7 +9,6 @@ import {
 } from '@tabler/icons-react';
 import { BottomGradient, Input } from '@/components';
 import { TbBrandApple } from 'react-icons/tb';
-import { motion } from 'framer-motion';
 
 function SignUpPage() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

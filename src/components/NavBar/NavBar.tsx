@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { FaRegMoon } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
+import { ThemeToogle } from '../ThemeToogle';
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -28,8 +28,8 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={`bg-black w-[70vw] py-4 px-7 fixed top-3 left-0 right-0 mx-auto transition-all duration-300 z-50 md:rounded-full ${
-				scrolled ? 'shadow-lg bg-white' : ''
+			className={`w-[70vw] py-4 sm:py-4 md:py-2 px-7 md:px-5 fixed top-3 left-0 right-0 mx-auto transition-all duration-300 z-50 md:rounded-full ${
+				scrolled ? 'shadow-lg bg-black dark:bg-white' : 'bg-white dark:bg-black'
 			}`}>
 			<div className="container mx-auto flex justify-between items-center">
 				{/* Left section: Logo and Navigation */}
@@ -38,7 +38,9 @@ const Navbar = () => {
 						to="/"
 						className={({ isActive }) =>
 							`${isActive ? '' : 'pointer '} text-lg font-bold ${
-								scrolled ? 'text-black' : 'text-white'
+								scrolled
+									? 'text-white dark:text-black'
+									: 'text-black dark:text-white'
 							}`
 						}>
 						TransQ
@@ -47,8 +49,12 @@ const Navbar = () => {
 						<NavLink
 							to="/"
 							className={({ isActive }) =>
-								`${isActive ? 'text-slate-500' : 'pointer '} ${
-									scrolled ? 'text-black' : 'text-white'
+								`${
+									isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer'
+								} ${
+									scrolled
+										? ' text-white dark:text-black'
+										: 'text-black dark:text-white'
 								}`
 							}>
 							Home
@@ -56,17 +62,25 @@ const Navbar = () => {
 						<NavLink
 							to="/order-tracking"
 							className={({ isActive }) =>
-								`${isActive ? 'text-slate-500' : 'pointer '} ${
-									scrolled ? 'text-black' : 'text-white'
+								`${
+									isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer'
+								} ${
+									scrolled
+										? ' text-white dark:text-black'
+										: 'text-black dark:text-white'
 								}`
 							}>
-							Track the order
+							Track
 						</NavLink>
 						<NavLink
 							to="/services"
 							className={({ isActive }) =>
-								`${isActive ? 'text-slate-500' : 'pointer '} ${
-									scrolled ? 'text-black' : 'text-white'
+								`${
+									isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer'
+								} ${
+									scrolled
+										? ' text-white dark:text-black'
+										: 'text-black dark:text-white'
 								}`
 							}>
 							Services
@@ -74,8 +88,12 @@ const Navbar = () => {
 						<NavLink
 							to="/contact"
 							className={({ isActive }) =>
-								`${isActive ? 'text-slate-500' : 'pointer '} ${
-									scrolled ? 'text-black' : 'text-white'
+								`${
+									isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer'
+								} ${
+									scrolled
+										? ' text-white dark:text-black'
+										: 'text-black dark:text-white'
 								}`
 							}>
 							Contact
@@ -84,12 +102,14 @@ const Navbar = () => {
 				</div>
 				{/* Right section: Icons */}
 				<div className="hidden md:flex items-center space-x-4">
-					<FaRegMoon className={`${scrolled ? 'text-black' : 'text-white'}`} />
+					<ThemeToogle />
 					<NavLink
 						to="/login"
 						className={({ isActive }) =>
-							`${isActive ? 'text-slate-500' : 'pointer '} ${
-								scrolled ? 'text-black' : 'text-white'
+							`${isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer '}${
+								scrolled
+									? ' text-white dark:text-black'
+									: 'text-black dark:text-white'
 							}`
 						}>
 						Login
@@ -97,19 +117,24 @@ const Navbar = () => {
 					<NavLink
 						to="/register"
 						className={({ isActive }) =>
-							`${isActive ? 'text-slate-500' : 'pointer '} ${
-								scrolled ? 'text-black' : 'text-white'
-							} bg-gray-700 px-3 py-1 rounded`
+							`${isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer'} ${
+								scrolled
+									? ' text-white dark:text-black'
+									: 'text-black dark:text-white'
+							} bg-gray-700 px-3 py-1 rounded font-bold`
 						}>
 						Sign Up
 					</NavLink>
 				</div>
 				{/* Mobile menu button */}
-				<div className="md:hidden">
+				<div className="flex md:hidden">
+					<ThemeToogle />
 					<button
 						onClick={toggleMenu}
 						className={`${
-							scrolled ? 'text-black' : 'text-white'
+							scrolled
+								? 'text-white dark:text-black'
+								: 'text-black dark:text-white'
 						} focus:outline-none`}>
 						<svg
 							className="w-6 h-6"
@@ -126,6 +151,7 @@ const Navbar = () => {
 					</button>
 				</div>
 			</div>
+
 			{/* Mobile menu */}
 			{isOpen && (
 				<div className="md:hidden mt-2">
@@ -133,24 +159,28 @@ const Navbar = () => {
 						to="/order-tracking"
 						className={({ isActive }) =>
 							`${
-								isActive ? 'hover:bg-slate-700' : 'pointer hover:bg-slate-700'
+								isActive
+									? 'hover:bg-slate-400 dark:hover:bg-slate-700'
+									: 'pointer hover:bg-slate-400 dark:hover:bg-slate-700'
 							} ${
 								scrolled
-									? 'text-black block py-2 px-4'
-									: 'block text-white py-2 px-4'
+									? 'text-white dark:text-black block py-2 px-4'
+									: 'block text-black dark:text-white py-2 px-4'
 							}`
 						}>
-						Track the order
+						Track
 					</NavLink>
 					<NavLink
 						to="/services"
 						className={({ isActive }) =>
 							`${
-								isActive ? 'hover:bg-slate-700' : 'pointer hover:bg-slate-700'
+								isActive
+									? 'hover:bg-slate-400 dark:hover:bg-slate-700'
+									: 'pointer hover:bg-slate-400 dark:hover:bg-slate-700'
 							} ${
 								scrolled
-									? 'text-black block py-2 px-4'
-									: 'block text-white py-2 px-4'
+									? 'text-white dark:text-black block py-2 px-4'
+									: 'block text-black dark:text-white py-2 px-4'
 							}`
 						}>
 						Services
@@ -159,27 +189,29 @@ const Navbar = () => {
 						to="/contact"
 						className={({ isActive }) =>
 							`${
-								isActive ? 'hover:bg-slate-700' : 'pointer hover:bg-slate-700'
+								isActive
+									? 'hover:bg-slate-400 dark:hover:bg-slate-700'
+									: 'pointer hover:bg-slate-400 dark:hover:bg-slate-700'
 							} ${
 								scrolled
-									? 'text-black block py-2 px-4 '
-									: 'block text-white py-2 px-4'
+									? 'text-white dark:text-black block py-2 px-4'
+									: 'block text-black dark:text-white py-2 px-4'
 							}`
 						}>
 						Contact
 					</NavLink>
-					<FaRegMoon
-						className={`hover:text-slate-700 ${
-							scrolled ? 'my-2 mx-4 text-black ' : 'my-2 mx-4 text-white'
-						}`}
-					/>
+
 					<NavLink
 						to="/login"
 						className={({ isActive }) =>
-							`${isActive ? 'hover:bg-slate-700' : 'pointer '} ${
+							`${
+								isActive
+									? 'hover:bg-slate-400 dark:hover:bg-slate-700'
+									: 'pointer hover:bg-slate-400 dark:hover:bg-slate-700'
+							} ${
 								scrolled
-									? 'text-black block py-2 px-4'
-									: 'block text-white py-2 px-4'
+									? 'text-white dark:text-black block py-2 px-4'
+									: 'block text-black dark:text-white py-2 px-4'
 							}`
 						}>
 						Login
@@ -187,11 +219,15 @@ const Navbar = () => {
 					<NavLink
 						to="/register"
 						className={({ isActive }) =>
-							`${isActive ? 'hover:bg-slate-600' : 'pointer'} ${
+							`${
+								isActive
+									? 'hover:bg-slate-400 dark:hover:bg-slate-700'
+									: 'pointer hover:bg-slate-400 dark:hover:bg-slate-700'
+							} ${
 								scrolled
-									? 'text-black block py-2 px-4 bg-gray-700 rounded'
-									: 'block text-white py-2 px-4 bg-gray-700 rounded'
-							}`
+									? 'text-white dark:text-black block py-2 px-4'
+									: 'block text-black dark:text-white py-2 px-4'
+							} font-bold bg-gray-700`
 						}>
 						Sign Up
 					</NavLink>

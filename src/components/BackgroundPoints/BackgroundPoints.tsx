@@ -9,12 +9,12 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 	const numLines = 7; // Número de líneas en la cuadrícula
 
 	return (
-		<div className="relative w-full h-screen overflow-hidden bg-black bg-opacity-50">
+		<div className="relative w-full h-screen overflow-hidden bg-gray-100 dark:bg-black bg-opacity-50">
 			{/* Líneas verticales */}
 			{Array.from({ length: numLines }).map((_, index) => (
 				<div
 					key={`vertical-${index}`}
-					className={`absolute `}
+					className="absolute"
 					style={{
 						width: '1px',
 						height: '100%',
@@ -30,7 +30,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 			{Array.from({ length: numLines - 1 }).map((_, index) => (
 				<div
 					key={`horizontal-${index}`}
-					className={`absolute `}
+					className="absolute"
 					style={{
 						width: '100%',
 						height: '1px',
@@ -49,8 +49,7 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 						return (
 							<motion.div
 								key={`point-${i}-${j}`}
-								className={`absolute  md:block' : ''
-								}`}
+								className="absolute md:block"
 								style={{
 									width: '30px',
 									height: '30px',
@@ -69,14 +68,14 @@ const BackgroundPoints: React.FC<BackgroundPoints> = ({ children }) => {
 									delay: Math.random() * 2,
 								}}>
 								<div
-									className="absolute bg-gray-800 bg-opacity-25 rounded-full"
+									className="absolute bg-gray-800 bg-opacity-25 dark:bg-gray-100 dark:bg-opacity-25 rounded-full"
 									style={{
 										width: '30px',
 										height: '30px',
 									}}
 								/>
 								<div
-									className="absolute bg-gray-700 rounded-full"
+									className="absolute bg-gray-700 dark:bg-gray-200 rounded-full"
 									style={{
 										width: '12px',
 										height: '12px',

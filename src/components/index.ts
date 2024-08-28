@@ -19,3 +19,4 @@ export * from './Input';
 export * from './BottomGradient';
 export * from './ScrollToTop';
 export * from './ScrollUpButton';
+export * from './ThemeToogle';
