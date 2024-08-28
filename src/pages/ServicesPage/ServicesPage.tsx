@@ -15,7 +15,7 @@ import { newServices } from '../../constants/ServicesConstant';
 
 const ServicesPage = ({}) => {
 	return (
-		<div className="min-h-screen pt-24 pb-11 bg-black">
+		<div className="min-h-screen pt-24 pb-11 bg-white dark:bg-black">
 			<div className="max-w-[90vw] lg:max-w-[70vw] mx-auto flex flex-col items-center my-10">
 				<h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">
 					Our Services
@@ -49,8 +49,8 @@ const ServicesPage = ({}) => {
 								description={
 									<p>
 										Discover how{' '}
-										<span className="text-gray-600 font-bold">TRANSQ</span> can
-										revolutionize your business as a supplier
+										<span className="text-gray-600 font-bold">TRANSQ</span> Can
+										Revolutionize Your Business As A Supplier
 									</p>
 								}
 								titleServices="Available solutions"
@@ -63,13 +63,13 @@ const ServicesPage = ({}) => {
 						imageSrc="./services/logisticsservicesforcompanies.jpeg"
 						text={
 							<ContentTextCardHorizontal
-								title="Logistics services for companies"
+								title="Streamline Your Resource Management and Compliance"
 								typeService="company"
 								description={
 									<p className="my-5">
-										Discover how{' '}
-										<span className="text-gray-600 font-bold">TRANSQ</span> can
-										revolutionize your business as a supplier
+										See how{' '}
+										<span className="text-gray-600 font-bold">TRANSQ</span> Can
+										Transform Your Business Operations
 									</p>
 								}
 								titleServices="Available solutions"
@@ -82,13 +82,13 @@ const ServicesPage = ({}) => {
 						imageSrc="./services/logisticsservicesforcompanies.jpeg"
 						text={
 							<ContentTextCardHorizontal
-								title="Logistics services for companies"
+								title="Enhance Your Financial Management and Customer Support"
 								typeService="company"
 								description={
 									<p className="my-5">
-										Discover how{' '}
-										<span className="text-gray-600 font-bold">TRANSQ</span> can
-										revolutionize your business as a supplier
+										Learn How{' '}
+										<span className="text-gray-600 font-bold">TRANSQ</span> Can
+										Revolutionize Your Business Operations
 									</p>
 								}
 								titleServices="Available solutions"

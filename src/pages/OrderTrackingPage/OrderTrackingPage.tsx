@@ -51,7 +51,7 @@ const OrderTrackingPage: React.FC = () => {
 						duration: 0.8,
 						ease: 'easeInOut',
 					}}
-					className="max-w-3xl mx-auto p-9 sm:px-6 lg:px-8 bg-gradient-to-r from-white to-gray-400 text-black rounded-2xl">
+					className="max-w-3xl mx-auto p-9 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-400 via-white to-gray-400 text-black rounded-2xl">
 					<div className="space-y-6">
 						<div className="text-center">
 							<h1 className="text-3xl font-bold">Track Your Shipment</h1>

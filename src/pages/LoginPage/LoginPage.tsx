@@ -9,7 +9,6 @@ import {
 } from '@tabler/icons-react';
 import { BottomGradient, Input } from '@/components';
 import { TbBrandApple } from 'react-icons/tb';
-import { motion } from 'framer-motion';
 
 function LoginPage() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -18,14 +17,13 @@ function LoginPage() {
 	};
 
 	return (
-		<div className="relative bg-black overflow-hidden">
-			{/* Fondo del contenido principal */}
-			<div className="relative pt-24 pb-11 sm:mx-3 md:mx-0">
-				<div className="relative max-w-md w-full mx-auto rounded-2xl px-4 py-8 md:p-8 shadow-input bg-gradient-to-r from-white to-gray-400 dark:bg-black">
-					<h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+		<div className="relative bg-white dark:bg-black overflow-hidden">
+			<div className="relative pt-28 pb-11 sm:mx-3 md:mx-0">
+				<div className="relative max-w-md w-full mx-auto rounded-2xl px-4 py-8 md:p-8 shadow-input bg-gradient-to-br from-gray-400 via-white to-gray-400 dark:bg-black">
+					<h2 className="font-bold text-xl dark:text-neutral-800 text-neutral-800">
 						Welcome to TransQ
 					</h2>
-					<p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
+					<p className="dark:text-neutral-600 text-sm max-w-sm mt-2 text-neutral-600 font-semibold">
 						Sign in so you can have more benefits
 					</p>
 
@@ -33,22 +31,32 @@ function LoginPage() {
 						<div className={cn('flex flex-col space-y-2 w-full mb-4')}>
 							<label
 								className={cn(
-									'text-sm font-medium text-black dark:text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+									'text-sm font-medium dark:text-black text-neutral-800 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
 								)}
 								htmlFor="email">
 								Email Address
 							</label>
-							<Input id="email" placeholder="alex@correo.com" type="email" />
+							<Input
+								id="email"
+								placeholder="alex@correo.com"
+								type="email"
+								className="bg-gray-400 dark:bg-black placeholder:text-white dark:placeholder:text-slate-400"
+							/>
 						</div>
 						<div className={cn('flex flex-col space-y-2 w-full mb-4')}>
 							<label
 								className={cn(
-									'text-sm font-medium text-black dark:text-white leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
+									'text-sm font-medium dark:text-black text-neutral-800 leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
 								)}
 								htmlFor="password">
 								Password
 							</label>
-							<Input id="password" placeholder="••••••••" type="password" />
+							<Input
+								id="password"
+								placeholder="••••••••"
+								type="password"
+								className="bg-gray-400 dark:bg-black placeholder:text-white dark:placeholder:text-slate-400"
+							/>
 						</div>
 
 						<button

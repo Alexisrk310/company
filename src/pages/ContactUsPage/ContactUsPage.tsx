@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 const ContactUsPage = () => {
 	return (
-		<div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
+		<div className="min-h-screen bg-white dark:bg-black text-white flex items-center justify-center p-4">
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="absolute w-96 h-96 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  top-40 left-20 z-0 transform rotate-45 hidden md:hidden lg:block animate-fall"></motion.div>
+				className="absolute w-96 h-96 rounded-xl bg-gradient-to-br from-gray-400 via-white to-gray-400 dark:bg-gradient-to-r  dark:from-white  dark:to-gray-400 animate-pulse  top-40 left-20 z-0 transform rotate-45 hidden md:hidden lg:block animate-fall"></motion.div>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="absolute w-96 h-96 rounded-xl bg-gradient-to-r from-white to-gray-400 animate-pulse  bottom-8 right-20 transform rotate-12 hidden md:hidden lg:block animate-fall"></motion.div>
+				className="absolute w-96 h-96 rounded-xl bg-gradient-to-br from-gray-400 via-white to-gray-400 dark:bg-gradient-to-r  dark:from-white  dark:to-gray-400 animate-pulse  bottom-8 right-20 transform rotate-12 hidden md:hidden lg:block animate-fall"></motion.div>
 			<motion.div
 				initial={{ opacity: 0.0, y: -40 }}
 				whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const ContactUsPage = () => {
 				}}
 				className="max-w-lg w-full">
 				<h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
-				<form className="bg-gradient-to-r from-white to-gray-400 p-6 rounded-lg shadow-lg relative z-20">
+				<form className=" dark:bg-gradient-to-r bg-gradient-to-br from-gray-400 via-white to-gray-400 dark:from-white  dark:to-gray-400 p-6 rounded-lg shadow-lg relative z-20">
 					<div className="mb-4">
 						<label
 							className="block text-black text-md font-medium mb-2"
@@ -30,7 +30,7 @@ const ContactUsPage = () => {
 							Name
 						</label>
 						<input
-							className="w-full p-3 text-white bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+							className="w-full p-3 text-white bg-gray-400 dark:bg-black placeholder:text-white dark:placeholder:text-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
 							type="text"
 							id="name"
 							placeholder="Your Name"
@@ -43,7 +43,7 @@ const ContactUsPage = () => {
 							Email
 						</label>
 						<input
-							className="w-full p-3 text-white bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+							className="w-full p-3 text-white bg-gray-400 dark:bg-black placeholder:text-white dark:placeholder:text-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
 							type="email"
 							id="email"
 							placeholder="Your Email"
@@ -56,7 +56,7 @@ const ContactUsPage = () => {
 							Message
 						</label>
 						<textarea
-							className="w-full p-3 text-white bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
+							className="w-full p-3 text-white bg-gray-400 dark:bg-black placeholder:text-white dark:placeholder:text-slate-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400"
 							id="message"
 							rows={5}
 							placeholder="Your Message"></textarea>
@@ -72,12 +72,12 @@ const ContactUsPage = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="w-60 h-60 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse rounded-full top-40 right-60 hidden md:hidden lg:block"></motion.div>
+				className="w-60 h-60 absolute  dark:bg-gradient-to-r bg-gradient-to-br from-gray-400 via-white to-gray-400 dark:from-white  dark:to-gray-400 animate-pulse rounded-full top-40 right-60 hidden md:hidden lg:block"></motion.div>
 			<motion.div
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 1 }}
-				className="w-60 h-60 absolute bg-gradient-to-r from-white to-gray-400 animate-pulse  rounded-full bottom-8 left-60 transform rotate-45 hidden md:hidden lg:block"></motion.div>
+				className="w-60 h-60 absolute  dark:bg-gradient-to-r bg-gradient-to-br from-gray-400 via-white to-gray-400 dark:from-white  dark:to-gray-400 animate-pulse  rounded-full bottom-8 left-60 transform rotate-45 hidden md:hidden lg:block"></motion.div>
 		</div>
 	);
 };
