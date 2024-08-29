@@ -1,6 +1,6 @@
 const Footer = () => {
 	return (
-		<footer className="bg-gray-900 text-center lg:text-left text-white">
+		<footer className="bg-gradient-to-b from-gray-700 via-gray-600 to-gray-800 dark:from-gray-700 dark:via-gray-900 dark:to-gray-800 text-center lg:text-left text-white">
 			<div className="flex items-center justify-center border-b-2 border-gray-800 p-6 dark:border-white/10 lg:justify-between">
 				<div className="me-12 hidden lg:block">
 					<span>Get connected with us on social networks:</span>
@@ -170,7 +170,7 @@ const Footer = () => {
 				</div>
 			</div>
 
-			<div className="bg-gray-800 p-6 text-center">
+			<div className="bg-gray-800 dark:bg-gradient-to-b dark:from-gray-800 p-6 text-center">
 				© 2024
 				<a className="text-surface/75 hover:text-surface/100" href="#!">
 					TransQ

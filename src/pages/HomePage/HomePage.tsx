@@ -134,7 +134,7 @@ const HomePage = () => {
 							duration: 0.8,
 							ease: 'easeInOut',
 						}}
-						className="relative flex flex-col gap-4 items-center justify-center p-8 sm:px-12 md:px-24 lg:px-40 xl:px-56 py-9 rounded-lg bg-gradient-to-b from-gray-700 via-gray-900 to-gray-800 dark:from-gray-700 dark:via-gray-900 dark:to-gray-800 border border-gray-800">
+						className="relative flex flex-col gap-4 items-center justify-center p-8 sm:px-12 md:px-24 lg:px-40 xl:px-56 py-9 rounded-lg bg-gradient-to-b from-gray-700 via-gray-600 to-gray-800 dark:from-gray-700 dark:via-gray-900 dark:to-gray-800 border border-gray-800">
 						<div className="text-xl sm:text-3xl md:text-5xl lg:text-7xl font-bold text-white text-center">
 							Are you ready to ship your order?
 						</div>

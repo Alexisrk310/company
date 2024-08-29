@@ -119,7 +119,7 @@ const Navbar = () => {
 						className={({ isActive }) =>
 							`${isActive ? 'text-slate-900 dark:text-slate-500' : 'pointer'} ${
 								scrolled
-									? ' text-white dark:text-black'
+									? ' text-white dark:text-white'
 									: 'text-black dark:text-white'
 							} bg-gray-700 px-3 py-1 rounded font-bold`
 						}>
@@ -225,7 +225,7 @@ const Navbar = () => {
 									: 'pointer hover:bg-slate-400 dark:hover:bg-slate-700'
 							} ${
 								scrolled
-									? 'text-white dark:text-black block py-2 px-4'
+									? 'text-white dark:text-white block py-2 px-4'
 									: 'block text-black dark:text-white py-2 px-4'
 							} font-bold bg-gray-700`
 						}>

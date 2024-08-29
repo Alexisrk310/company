@@ -80,7 +80,7 @@ const InfiniteMovingCards = ({
 				)}>
 				{items.map((item) => (
 					<li
-						className="bg-gradient-to-b from-gray-700 via-gray-800 to-gray-800 dark:from-white dark:to-gray-400 w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 dark:border-gray-400 px-8 py-6"
+						className="bg-gradient-to-b from-gray-700 via-gray-600 to-gray-800 dark:from-white dark:to-gray-400 w-[300px] sm:w-[350px] md:w-[400px] lg:w-[450px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 dark:border-gray-400 px-8 py-6"
 						key={item.name}>
 						<blockquote>
 							<div
